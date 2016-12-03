@@ -75,10 +75,10 @@ public class main extends PluginBase implements Listener {
 	public boolean isInt(String str) {
 		try {
 			Integer.parseInt(str);
-			return true;
-		} catch (NumberFormatException e) {
+		} catch (NumberFormatException|NullPointerException e) {
 			return false;
 		}
+		return true;
 	}
 
 	@EventHandler
